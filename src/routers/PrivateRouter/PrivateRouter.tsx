@@ -1,9 +1,9 @@
-import { IPrivateRoute } from '../../interfaces/PrivateRouter/IPrivateRouter';
+import { IPrivateRoute } from '../../interfaces/PrivateRouter/IPrivateRouter.interface';
 import { Navigate } from 'react-router-dom';
-import useAuth from '../../hooks/is-auth';
+import { useIsAuth } from '../../hooks/user-auth';
 
 export const PrivateRouter = ({ children }: IPrivateRoute) => {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated } = useIsAuth();
 
   if (!isAuthenticated) {
     return <Navigate to={'/'} />;
