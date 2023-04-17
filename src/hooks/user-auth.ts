@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-import { AuthenticateUser } from '../interfaces/Auth/AuthenticateUser.interface';
+import { IAuthenticateUser } from '../interfaces/Auth/AuthenticateUser.interface';
 
 interface AuthState {
   isAuthenticated: boolean;
@@ -16,7 +15,7 @@ export const useIsAuth = (): AuthState => {
   }
 };
 
-export const useGetUser = (): AuthenticateUser | void => {
+export const useGetUser = (): IAuthenticateUser | void => {
   const user = Cookies.get('user');
 
   if (!user) {
@@ -24,4 +23,10 @@ export const useGetUser = (): AuthenticateUser | void => {
   }
 
   return JSON.parse(user);
+};
+
+export const useGetToken = (): string | void => {
+  const token = Cookies.get('token');
+
+  return token;
 };
