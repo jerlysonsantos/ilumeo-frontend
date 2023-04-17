@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Login } from '../pages/Login/Login';
+import { Login } from '../pages/Login';
 import { NotFound } from '../pages/NotFound/NotFound';
 import { PrivateRouter } from './PrivateRouter/PrivateRouter';
-import { Timesheet } from '../pages/Timesheet/Timesheet';
+import { Timesheet } from '../pages/Timesheet';
 
 export const AppRouter = () => (
   <Router>
