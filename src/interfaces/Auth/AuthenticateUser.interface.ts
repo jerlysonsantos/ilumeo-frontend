@@ -1,5 +1,5 @@
-export interface AuthenticateUser {
+export interface IAuthenticateUser {
   id: number;
   name: string;
-  userCode: string;
+  user_code: string;
 }
