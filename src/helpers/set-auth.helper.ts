@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie';
-import { IAuthenticateUser } from '../interfaces/Auth/IAuthenticateUser.interface';
+import { IAuthenticateUser } from '../interfaces/Auth/AuthenticateUser.interface';
 
 export const setAuth = (token: string, user: IAuthenticateUser) => {
   Cookies.set('token', token, { expires: 24 * 60 * 60 * 1000 });

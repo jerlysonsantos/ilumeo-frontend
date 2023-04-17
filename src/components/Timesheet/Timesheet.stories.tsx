@@ -14,6 +14,6 @@ type Story = StoryObj<typeof Timesheet>;
 
 export const Primary: Story = {
   render: () => (
-    <Timesheet title="Datas" loadMore={() => {}} cards={[{ date: '00/00/000', total_hours: '00:00' }]}></Timesheet>
+    <Timesheet title="Datas" loadMore={() => {}} timesheet={[{ date: '00/00/000', total_hours: '00:00' }]}></Timesheet>
   ),
 };
